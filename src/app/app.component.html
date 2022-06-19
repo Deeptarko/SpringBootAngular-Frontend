@@ -1,11 +1,33 @@
-
 <h1 class="text-center mt-5">Welcome to Student Management Application</h1>
 <router-outlet></router-outlet>
 
-<div class="container">
-  <button type="button" class="btn btn-warning m-3" routerLink="/displayStudent">Display Student</button>
-  <button type="button" class="btn btn-warning m-3" routerLink="/saveStudent">Save Student</button>
-  <button type="button" class="btn btn-warning m-3" routerLink="/deleteStudent">Delete Student</button>
-  
+<div class="main-body container vw-75">
+  <div class="container d-flex align-items-center justify-content-center">
+    <button
+      type="button"
+      class="btn btn-warning m-3"
+      routerLink="/displayStudent"
+    >
+      Display Student
+    </button>
+    <button type="button" class="btn btn-warning m-3" routerLink="/saveStudent">
+      Save Student
+    </button>
+    <button
+      type="button"
+      class="btn btn-warning m-3"
+      routerLink="/deleteStudent"
+    >
+      Delete Student
+    </button>
+    <button
+      type="button"
+      class="btn btn-warning m-3"
+      routerLink="/updateStudent"
+    >
+      Update Student
+    </button>
+    
   </div>
-  
+  <app-app-footer></app-app-footer>
+</div>

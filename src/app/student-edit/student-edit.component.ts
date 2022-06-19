@@ -9,15 +9,16 @@ import { StudentService } from '../student.service';
 })
 export class StudentEditComponent implements OnInit {
 
+  message:string='';
   constructor(private studentService:StudentService) { }
 
   ngOnInit(): void {
   }
 
   onSubmit(formData:NgForm){
-    console.log(formData.value);
+   
     this.studentService.saveStudent(formData.value).subscribe((obj)=>{
-      console.log(obj);
+      this.message=`Student has been successfully saved`;
     });
   }
 }

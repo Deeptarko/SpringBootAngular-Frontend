@@ -17,15 +17,18 @@ export class StudentService {
   constructor(private http:HttpClient){}
 
   getStudents():Observable<Student[]>{
-    return this.http.get<Student[]>(`http://localhost:9000/api/students`);
+    return this.http.get<Student[]>(`http://studentmanagementapp-env.eba-2fajet5v.us-east-1.elasticbeanstalk.com/api/students`);
   }
 
   saveStudent(student:StudentSave):Observable<Object>{
-    return this.http.post(`http://localhost:9000/api/saveStudent`,student,this.httpOptions);
+    return this.http.post(`http://studentmanagementapp-env.eba-2fajet5v.us-east-1.elasticbeanstalk.com/api/saveStudent`,student,this.httpOptions);
   }
 
   deleteStudent(studentId:number):Observable<DeleteResponse>{
-    return this.http.delete<DeleteResponse>(`http://localhost:9000/api/${studentId}`,this.httpOptions);
+    return this.http.delete<DeleteResponse>(`http://studentmanagementapp-env.eba-2fajet5v.us-east-1.elasticbeanstalk.com/api/${studentId}`,this.httpOptions);
+  }
+  updateStudent(studentId:number,student:StudentSave):Observable<Student>{
+    return this.http.put<Student>(`http://studentmanagementapp-env.eba-2fajet5v.us-east-1.elasticbeanstalk.com/api/${studentId}`,student,this.httpOptions);
   }
 
 }

@@ -8,13 +8,17 @@ import { AppComponent } from './app.component';
 import { StudentDisplayComponent } from './student-display/student-display.component';
 import { StudentEditComponent } from './student-edit/student-edit.component';
 import { StudentDeleteComponent } from './student-delete/student-delete.component';
+import { StudentUpdateComponent } from './student-update/student-update.component';
+import { AppFooterComponent } from './app-footer/app-footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     StudentDisplayComponent,
     StudentEditComponent,
-    StudentDeleteComponent
+    StudentDeleteComponent,
+    StudentUpdateComponent,
+    AppFooterComponent
   ],
   imports: [
     BrowserModule,
